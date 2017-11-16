@@ -1,0 +1,24 @@
+{
+
+  "manifest_version": 2,
+  "name": "Cleanside",
+  "version": "0.5",
+  "description": "Adds a filter to make darkside.se sliiiightly cleaner. Get your kink on without the ... fish!",
+
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+
+	"content_scripts": [
+		{
+			"matches": ["https://www.darkside.se/feed.php*"],
+			"css": ["clean_feed.css"]
+		},
+		{
+			"matches": ["https://www.darkside.se/alerts.php*"],
+			"css": ["clean_feed.css"]
+		}
+	]
+}
