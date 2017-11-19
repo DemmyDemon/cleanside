@@ -36,7 +36,7 @@
 	},
 	"applications": {
 		"gecko": {
-			"id": "00da3c5eb8f2e89865ff2156281a78675116b949@cleanside",
+			"id": "{b215affd-f0f9-4243-977d-00de6125d674}",
 			"strict_min_version": "57.0"
 		}
 	}
