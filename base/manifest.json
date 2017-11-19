@@ -2,23 +2,43 @@
 
   "manifest_version": 2,
   "name": "Cleanside",
-  "version": "0.5",
-  "description": "Adds a filter to make darkside.se sliiiightly cleaner. Get your kink on without the ... fish!",
+  "version": "0.9",
+	"description": "Lägger ett filter på darkside.se så det blir liiiiite renare. Samma kink, fast utan oönskad ... fisk!",
+	"permissions": ["storage"],
+	"options_ui": {
+		"page": "settings.html"
+	},
 
   "icons": {
     "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
+		"48": "icons/icon48.png",
+		"64": "icons/icon64.png",
     "128": "icons/icon128.png"
-  },
+	},
 
 	"content_scripts": [
 		{
-			"matches": ["https://www.darkside.se/feed.php*"],
-			"css": ["clean_feed.css"]
-		},
-		{
-			"matches": ["https://www.darkside.se/alerts.php*"],
-			"css": ["clean_feed.css"]
+			"matches": ["https://www.darkside.se/*"],
+			"js": ["cleanside.js"],
+			"css" : ["cleanside.css"]
 		}
-	]
+	],
+
+	"background": {
+    "scripts": ["background.js"]
+	},
+		
+	"browser_action": {
+		"default_icon": {
+			"16": "icons/icon16.png"
+		},
+		"default_title": "Cleanside"
+	},
+	"applications": {
+		"gecko": {
+			"id": "00da3c5eb8f2e89865ff2156281a78675116b949@cleanside",
+			"strict_min_version": "57.0"
+		}
+	}
+
 }

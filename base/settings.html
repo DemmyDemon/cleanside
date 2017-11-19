@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Inställningar - Cleanside</title>
+        <script src="cleanside.js" lang="javascript"></script>
+        <script src="settings.js" lang="javascript"></script>
+        <link rel="stylesheet" type="text/css" href="settings.css">
+        <link rel="stylesheet" type="text/css" href="cleanside.css">
+    </head>
+    <body>
+        <form id="settings" action="">
+            <fieldset id="handelseflode">
+                <legend>Bilder i Händelseflöde</legend>
+                <img class="fisk_preview" id="fisk_handelseflode" src="icons/fiskbild.png">
+
+                <input type="radio" data-for="fisk_handelseflode" id="handelseflode_vanlig" name="style_handelseflode" value="none">
+                <label for="handelseflode_vanlig">Vanliga</label>
+                <br>
+                <input type="radio" data-for="fisk_handelseflode" id="handelseflode_blur" name="style_handelseflode" value="csBlur">
+                <label for="handelseflode_blur">Suddiga</label>
+                <br>
+                <input type="radio" data-for="fisk_handelseflode" id="handelseflode_desat" name="style_handelseflode" value="csDesat">
+                <label for="handelseflode_desat">Färglösa</label>
+                <br>
+                <input type="radio" data-for="fisk_handelseflode" id="handelseflode_both" name="style_handelseflode" value="csBoth">
+                <label for="handelseflode_both">Båda</label>
+                <br>
+
+            </fieldset>
+            <fieldset id="responser">
+                <legend>Bilder i Responser</legend>
+                <img class="fisk_preview" id="fisk_responser" src="icons/fiskbild.png">
+                
+                <input type="radio" data-for="fisk_responser" id="responser_vanlig" name="style_responser" value="none">
+                <label for="responser_vanlig">Vanliga</label>
+                <br>
+                <input type="radio" data-for="fisk_responser" id="responser_blur" name="style_responser" value="csBlur">
+                <label for="responser_blur">Suddiga</label>
+                <br>
+                <input type="radio" data-for="fisk_responser" id="responser_desat" name="style_responser" value="csDesat">
+                <label for="responser_desat">Färglösa</label>
+                <br>
+                <input type="radio" data-for="fisk_responser" id="responser_both" name="style_responser" value="csBoth">
+                <label for="responser_both">Båda</label>
+                <br>
+            </fieldset>
+            <fieldset id="nytt">
+                <legend>Bilder i Nytt material</legend>
+                <img class="fisk_preview" id="fisk_nytt" src="icons/fiskbild.png">
+                
+                <input type="radio" data-for="fisk_nytt" id="nytt_vanlig" name="style_nytt" value="none">
+                <label for="nytt_vanlig">Vanliga</label>
+                <br>
+                <input type="radio" data-for="fisk_nytt" id="nytt_blur" name="style_nytt" value="csBlur">
+                <label for="nytt_blur">Suddiga</label>
+                <br>
+                <input type="radio" data-for="fisk_nytt" id="nytt_desat" name="style_nytt" value="csDesat">
+                <label for="nytt_desat">Färglösa</label>
+                <br>
+                <input type="radio" data-for="fisk_nytt" id="nytt_both" name="style_nytt" value="csBoth">
+                <label for="nytt_both">Båda</label>
+                <br>
+            </fieldset>
+            <fieldset id="tradar">
+                <legend>Bilder i nätverkstrådar</legend>
+                <img class="fisk_preview" id="fisk_tradar" src="icons/fiskbild.png">
+                
+                <input type="radio" data-for="fisk_tradar" id="tradar_vanlig" name="style_tradar" value="none">
+                <label for="tradar_vanlig">Vanliga</label>
+                <br>
+                <input type="radio" data-for="fisk_tradar" id="tradar_blur" name="style_tradar" value="csBlur">
+                <label for="tradar_blur">Suddiga</label>
+                <br>
+                <input type="radio" data-for="fisk_tradar" id="tradar_desat" name="style_tradar" value="csDesat">
+                <label for="tradar_desat">Färglösa</label>
+                <br>
+                <input type="radio" data-for="fisk_tradar" id="tradar_both" name="style_tradar" value="csBoth">
+                <label for="tradar_both">Båda</label>
+                <br>
+            </fieldset>
+            <br>
+            <button type="submit" id="save">Spara inställningar</button>
+            <br>
+            <div id="credits">Fiskbilden är baserad på bilden <a href="https://www.flickr.com/photos/pardee/3045441319/in/photolist-5D7Gr6-5D7Fgi-5DbYbw-5DbXKq-5DbY6Q-5DbYgu-5DbXxE-5DbYxu-5DbYqh-5D7G8M-5DbZ5E-5D7FAX-5DbYyj-5DbYXo-5DbXT5-5D7Ftx-5D7FZk-5D7Fkx-5DbXu3-5D7GmT-5D7FER-5D7Gfv-5oNzHr-4f5APb-5oNA3t-5DbZ2y-5DbYzs-7KkuRE-7KgySg-7KkuDm-4Nj9M4-4rdKiL-3fdP12-43gr7v-3fdPm6-RzBTG-34wAfg-7Kgz38-2KtL7Q-5oSTAo-2KpqsP-4kfsUh-4kbryD-PiVTG-4f5ARh-4kfsEh-7KkuM9-4MRSyP-4z8gHk-5oNzoP">Fish</a> av <a href="https://www.flickr.com/photos/pardee/">Pardee Ave.</a></a></div>
+        </form>
+    </body>
+</html>
