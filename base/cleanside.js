@@ -1,7 +1,7 @@
 
 var cleanSide = {
     filters : {},
-    sections : ["handelseflode","responser","nytt","tradar"],
+    sections : ["handelseflode","responser","nytt","tradar","omtalat"],
     applyFilter : function(element,filterName){
         element.classList.remove("csBlur","csDesat","csBoth");
         if (filterName !== 'none'){
@@ -44,7 +44,13 @@ var cleanSide = {
         }
         else if (href.match(/\/net\/\?discussion/)){
             context = 'tradar';
-            cleanSide.cleanComplexContext(context);
+            cleanSide.cleanThreadContext(context);
+        }
+        else if (href.match(/\/top.php/)){
+            context = 'omtalat';
+            cleanSide.cleanToplistContext(context);
+            // This needs it's own context cleaner because the second selector in the standard context breaks
+            // the header image when something in the 
         }
         else {
             // console.log(href+' - Not touching that!');
@@ -61,10 +67,16 @@ var cleanSide = {
             cleanSide.applyFilter(element,filter);
         });
     },
-    cleanComplexContext : function (context){
+    cleanThreadContext : function (context){
         var filter = cleanSide.getFilter(context);
         // console.log("complex context "+context+" has filter "+filter);
         document.querySelectorAll('#v5maincontents .fcell2 img').forEach(function(element){
+            cleanSide.applyFilter(element,filter);
+        });
+    },
+    cleanToplistContext : function (context){
+        var filter = cleanSide.getFilter(context);
+        document.querySelectorAll('#v5maincontents .topcard a[href^="/g.php"] > img').forEach(function(element){
             cleanSide.applyFilter(element,filter);
         });
     }
